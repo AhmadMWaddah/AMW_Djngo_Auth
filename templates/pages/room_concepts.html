@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ page }}{% endblock title %}
+{% block content %}
+{% include '__partials/__page_title.html' %}
+{% include '__partials/__divider.html' %}
+<div class="ui container">
+    <div class="ui grid">
+        <div class="column">
+            <div class="ui green raised segment">
+                <img src="{% static 'images/about.png' %}" class="ui fluid image">
+            </div>
+        </div>
+    </div>
+</div>
+{% include '__partials/__divider.html' %}
+<div class="ui justified text container">
+    <div class="ui grid">
+        <div class="column">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Molestie at elementum eu facilisis sed odio morbi quis commodo. Ullamcorper sit
+                amet risus nullam eget felis eget nunc lobortis. Enim nulla aliquet porttitor lacus luctus. Enim eu
+                turpis egestas pretium aenean pharetra magna ac placerat. At auctor urna nunc id. Ultrices gravida
+                dictum fusce ut placerat orci nulla pellentesque dignissim. Tempus iaculis urna id volutpat lacus
+                laoreet non. Bibendum ut tristique et egestas quis ipsum suspendisse. Donec et odio pellentesque diam
+                volutpat commodo sed egestas. In fermentum posuere urna nec tincidunt praesent semper. Platea dictumst
+                vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Vel pretium lectus quam id leo.
+                Gravida rutrum quisque non tellus. Bibendum ut tristique et egestas quis ipsum suspendisse ultrices.</p>
+            <p>Dictumst quisque sagittis purus sit amet volutpat consequat mauris nunc. Dictum fusce ut placerat orci.
+                Non tellus orci ac auctor augue. Neque aliquam vestibulum morbi blandit cursus risus at. Eget aliquet
+                nibh praesent tristique magna sit amet purus. Integer enim neque volutpat ac tincidunt vitae semper. Id
+                faucibus nisl tincidunt eget nullam non. Enim ut tellus elementum sagittis vitae et leo duis. Eu
+                volutpat odio facilisis mauris sit amet. Id venenatis a condimentum vitae. Morbi blandit cursus risus at
+                ultrices mi. Mauris vitae ultricies leo integer malesuada nunc vel. Sed ullamcorper morbi tincidunt
+                ornare. Non diam phasellus vestibulum lorem sed. Tristique sollicitudin nibh sit amet commodo nulla
+                facilisi. Suscipit tellus mauris a diam maecenas. Amet consectetur adipiscing elit pellentesque
+                habitant. Nunc sed velit dignissim sodales ut. Ipsum dolor sit amet consectetur adipiscing. Donec massa
+                sapien faucibus et.</p>
+        </div>
+    </div>
+</div>
+{% include '__partials/__divider.html' %}
+<div class="ui center aligned container">
+    <div class="ui relaxed middle aligned grid">
+        <div class="column">
+            <button id="Flipper_Left" class="ui icon button" onclick="flip_me_left()">
+                <i class="angle double left icon"></i>
+            </button>
+        </div>
+        <div class="fourteen wide column">
+            <div class="ui cube shape">
+                <div class="sides">
+                    <div class="active side">
+                        <div class="content">
+                            <div class="center">
+                                <img src="{% static 'images/ideas/idea1.png' %}" class="ui rounded massive image HeightMe"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="side">
+                        <div class="content">
+                            <div class="center">
+                                <img src="{% static 'images/ideas/idea2.jpg' %}" class="ui rounded massive image HeightMe"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="side">
+                        <div class="content">
+                            <div class="center">
+                                <img src="{% static 'images/ideas/idea3.png' %}" class="ui rounded massive image HeightMe"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="side">
+                        <div class="content">
+                            <div class="center">
+                                <img src="{% static 'images/ideas/idea4.png' %}" class="ui rounded massive image HeightMe"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="side">
+                        <div class="content">
+                            <div class="center">
+                                <img src="{% static 'images/ideas/idea5.png' %}" class="ui rounded massive image HeightMe"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="side">
+                        <div class="content">
+                            <div class="center">
+                                <img src="{% static 'images/ideas/idea6.jpeg' %}" class="ui rounded massive image HeightMe"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <button id="Flipper_Right" class="ui right icon button" onclick="flip_me_right()">
+                <i class="angle double right icon"></i>
+            </button>
+        </div>
+    </div>
+</div>
+{% include '__partials/__padding_footer.html' %}
+{% endblock content %}

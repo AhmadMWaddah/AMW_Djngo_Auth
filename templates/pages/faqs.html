@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ page }}{% endblock title %}
+{% block content %}
+{% include '__partials/__page_title.html' %}
+{% include '__partials/__divider.html' %}
+<div class="ui relaxed column grid container">
+    <div class="column">
+        {% for faq in faqs %}
+        <div class="ui segments">
+            <div class="ui segment">
+                <p class="FntFmly">{{ faq.question }}</p>
+            </div>
+            <div class="ui secondary segment">
+                <p class="FntFmly">{{ faq.answer }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% include '__partials/__padding_footer.html' %}
+{% endblock content %}

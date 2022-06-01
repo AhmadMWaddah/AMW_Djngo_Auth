@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ page }}{% endblock title %}
+{% block content %}
+{% include '__partials/__page_title.html' %}
+{% include '__partials/__divider.html' %}
+<div class="ui container">
+    <div class="ui grid">
+        <div class="justified column">
+            <div class="ui basic segment">
+                <p class="ui header">Raw Materials</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Placerat duis ultricies lacus sed turpis tincidunt. Sociis natoque penatibus
+                    et magnis dis parturient montes. Vestibulum rhoncus est pellentesque elit ullamcorper dignissim
+                    cras. Venenatis lectus magna fringilla urna. Auctor urna nunc id cursus metus aliquam. Viverra
+                    suspendisse potenti nullam ac tortor. Sapien et ligula ullamcorper malesuada proin. Mauris ultrices
+                    eros in cursus. Id diam maecenas ultricies mi eget mauris pharetra et ultrices. Bibendum neque
+                    egestas congue quisque egestas diam. Aliquet risus feugiat in ante. Sagittis eu volutpat odio
+                    facilisis mauris sit amet massa. Praesent semper feugiat nibh sed pulvinar proin gravida hendrerit.
+                    Nunc mi ipsum faucibus vitae aliquet nec ullamcorper. Nulla pharetra diam sit amet nisl. Ipsum nunc
+                    aliquet bibendum enim.</p>
+                <p>Elementum curabitur vitae nunc sed velit dignissim sodales. Arcu ac tortor dignissim convallis aenean
+                    et. Risus commodo viverra maecenas accumsan lacus vel facilisis. Tristique senectus et netus et
+                    malesuada fames. Magna sit amet purus gravida quis blandit turpis. Amet tellus cras adipiscing enim
+                    eu turpis egestas. Faucibus purus in massa tempor nec feugiat. Cum sociis natoque penatibus et
+                    magnis dis parturient montes. Netus et malesuada fames ac turpis egestas integer eget. Duis at
+                    consectetur lorem donec massa. Feugiat in fermentum posuere urna. Mollis nunc sed id semper risus in
+                    hendrerit.</p>
+                <p>Elementum curabitur vitae nunc sed. Tristique et egestas quis ipsum suspendisse ultrices gravida
+                    dictum fusce. Viverra nibh cras pulvinar mattis nunc sed blandit libero volutpat. Tincidunt dui ut
+                    ornare lectus sit. Nibh venenatis cras sed felis eget velit aliquet sagittis id. Vitae justo eget
+                    magna fermentum iaculis eu non diam. Aliquet nec ullamcorper sit amet risus. Mattis enim ut tellus
+                    elementum sagittis vitae et leo. Malesuada fames ac turpis egestas integer eget aliquet nibh
+                    praesent. Amet nisl purus in mollis nunc. Est velit egestas dui id. Cras pulvinar mattis nunc sed.
+                    Amet mauris commodo quis imperdiet massa tincidunt nunc. Lobortis feugiat vivamus at augue. Iaculis
+                    urna id volutpat lacus laoreet non curabitur. Massa enim nec dui nunc mattis. Ut placerat orci nulla
+                    pellentesque dignissim enim sit.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% include '__partials/__divider.html' %}
+<div class="ui container">
+    <div class="ui grid">
+        <div class="justified column">
+            <div class="ui basic segment">
+                <p class="ui header">Safety Standards & Certificates</p>
+            </div>
+            <div class="ui basic segment">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Cursus euismod quis viverra nibh. Lorem donec massa sapien faucibus et
+                    molestie ac. Quis ipsum suspendisse ultrices gravida dictum. Est ante in nibh mauris cursus mattis.
+                    Accumsan tortor posuere ac ut consequat semper. Ultricies leo integer malesuada nunc vel risus
+                    commodo viverra. Semper quis lectus nulla at volutpat diam ut venenatis tellus. Faucibus nisl
+                    tincidunt eget nullam non nisi est. Sem nulla pharetra diam sit. Id diam vel quam elementum pulvinar
+                    etiam non. Ullamcorper dignissim cras tincidunt lobortis. Vulputate odio ut enim blandit volutpat
+                    maecenas volutpat blandit aliquam. Fames ac turpis egestas maecenas pharetra convallis. Sed egestas
+                    egestas fringilla phasellus. Faucibus nisl tincidunt eget nullam non nisi est sit.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% include '__partials/__divider.html' %}
+<div class="ui container">
+    <div class="ui equal width grid">
+        <div class="column">
+            <img src="{% static 'images/about.png' %}" class="ui fluid image"/>
+        </div>
+        <div class="column">
+            <img src="{% static 'images/about.png' %}" class="ui fluid image"/>
+        </div>
+        <div class="column">
+            <img src="{% static 'images/about.png' %}" class="ui fluid image"/>
+        </div>
+        <div class="column">
+            <img src="{% static 'images/about.png' %}" class="ui fluid image"/>
+        </div>
+        <div class="column">
+            <img src="{% static 'images/about.png' %}" class="ui fluid image"/>
+        </div>
+        <div class="column">
+            <img src="{% static 'images/about.png' %}" class="ui fluid image"/>
+        </div>
+    </div>
+</div>
+{% include '__partials/__padding_footer.html' %}
+{% endblock content %}

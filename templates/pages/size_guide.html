@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ page }}{% endblock title %}
+{% block content %}
+{% include '__partials/__page_title.html' %}
+{% include '__partials/__divider.html' %}
+<div class="ui container">
+    <div class="ui grid">
+        <div class="column">
+            <div class="ui green raised segment">
+                <img src="{% static 'images/about.png' %}" class="ui fluid image">
+            </div>
+        </div>
+    </div>
+</div>
+{% include '__partials/__divider.html' %}
+<div class="ui container">
+    <div class="ui grid">
+        <div class="justified column">
+            <div class="ui basic segment">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Nunc vel risus commodo viverra maecenas accumsan. Lobortis scelerisque
+                    fermentum dui faucibus in ornare quam viverra. Lectus proin nibh nisl condimentum id venenatis a.
+                    Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo.</p>
+            </div>
+            <div class="ui basic segment">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Nunc vel risus commodo viverra maecenas accumsan adipiscing elit duis
+                    tristique sollicitudin nibh sit amet commo
+                    <span class="ui basic segment">
+                        <span class="ui small green header">BS EN 1729</span>
+                    </span>Lectus proin nibh nisl condimentum id venenatis Consectetur adipiscing elit duis tristique
+                    sollicitudin nibh sit amet commodo
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% include '__partials/__divider.html' %}
+<div class="ui container">
+    <div class="ui grid">
+        <div class="column">
+            <div class="ui green raised segment">
+                <img src="{% static 'images/about.png' %}" class="ui fluid image">
+            </div>
+        </div>
+    </div>
+</div>
+{% include '__partials/__padding_footer.html' %}
+{% endblock content %}

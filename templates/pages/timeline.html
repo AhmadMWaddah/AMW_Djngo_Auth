@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ page }}{% endblock title %}
+{% block content %}
+{% include '__partials/__page_title.html' %}
+{% include '__partials/__divider.html' %}
+<div class="ui container">
+    <div class="ui grid">
+        <div class="column">
+            <div class="ui green raised segment">
+                <img src="{% static 'images/about.png' %}" class="ui fluid image">
+            </div>
+        </div>
+    </div>
+</div>
+{% include '__partials/__divider.html' %}
+<div class="ui container">
+    <div class="ui grid">
+        <div class="justified column">
+            <div class="ui basic segment">
+                <h3 class="ui green header">Our Timeline</h3>
+            </div>
+            <div class="ui basic segment">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore magna aliqua. Elementum eu facilisis sed odio morbi quis commodo odio. Ultricies
+                    tristique nulla aliquet enim tortor at auctor urna nunc. Cursus vitae congue mauris rhoncus.
+                    Bibendum enim facilisis gravida neque convallis a. Amet consectetur adipiscing elit ut aliquam
+                    purus sit. Ultrices vitae auctor eu augue. In mollis nunc sed id. Sit amet massa vitae tortor.
+                    Ultricies mi quis hendrerit dolor magna eget. Auctor urna nunc id cursus metus aliquam eleifend
+                    mi in. Diam sit amet nisl suscipit adipiscing bibendum est ultricies integer. Ultricies integer
+                    quis auctor elit. Cras ornare arcu dui vivamus arcu. Amet luctus venenatis lectus magna
+                    fringilla.
+                </p>
+            </div>
+            <div class="ui basic segment">
+                <p>Vulputate sapien nec sagittis aliquam malesuada bibendum arcu. Magna ac placerat vestibulum lectus
+                    mauris ultrices eros in cursus. Turpis tincidunt id aliquet risus feugiat in ante metus dictum.
+                    Tincidunt eget nullam non nisi est sit amet. Cras tincidunt lobortis feugiat vivamus at augue.
+                    Egestas fringilla phasellus faucibus scelerisque eleifend donec pretium. Adipiscing elit
+                    pellentesque habitant morbi tristique senectus.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% include '__partials/__padding_footer.html' %}
+{% endblock content %}

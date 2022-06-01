@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ page }}{% endblock title %}
+{% block content %}
+{% include '__partials/__page_title.html' %}
+{% include '__partials/__divider.html' %}
+<div class="ui center aligned container">
+    <div class="ui four columns grid">
+        {% for project in projects %}
+        <div class="column">
+            <div class="ui cards">
+                <div class="ui green raised segment">
+                    <div class="ui fluid card">
+                        <div class="image">
+                            <img src="{{ project.main_image.url }}" class="ui fluid image"/>
+                        </div>
+                        <div class="content">
+                            <div class="header">{{ project.name }}</div>
+                            <div class="meta">{{ project.area }}</div>
+                            <div class="ui raised green segment">
+                                <a href="{{ project.get_absolute_url }}">
+                                    <div class="ui botton">View More</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% include '__partials/__padding_footer.html' %}
+{% endblock content %}

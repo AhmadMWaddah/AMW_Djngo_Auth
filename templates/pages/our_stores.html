@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ page }}{% endblock title %}
+{% block content %}
+{% include '__partials/__page_title.html' %}
+{% include '__partials/__divider.html' %}
+<div class="ui very relaxed column grid container">
+    {% for store in stores %}
+    <div class="eight wide column">
+        <div class="ui raised green segment">
+            <div class="ui fluid image">
+                <img src="{{ store.image.url }}"/>
+            </div>
+            <div class="ui divider"></div>
+            <p>{{ store.name }}</p>
+            <p>
+                <span>{{ store.street }}</span>, <span>{{ store.city }}</span>, <span>{{ store.state }}.</span>
+            </p>
+            <p>
+                <span>{{ store.mobile }}</span> - <span>{{ store.phone }}</span>
+            </p>
+            <a href="mailto:{{ store.email }}">{{ store.email }}</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% include '__partials/__padding_footer.html' %}
+{% endblock content %}

@@ -1,0 +1,9 @@
+<div class="ui padded basic segment">
+    {% if messages %}
+    {% for msg in messages %}
+    <div style="background: rgba(0, 179, 0, 0.2); color: rgb(100, 220, 100); margin: 0 auto;">
+        {{ msg }}
+    </div>
+    {% endfor %}
+    {% endif %}
+</div>

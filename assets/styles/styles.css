@@ -1,0 +1,20 @@
+.FntFmly{font-family:"Century Gothic";}
+
+#Social-Fixed {
+    position: fixed;
+    top: 15vh;
+    z-index: 100;
+}
+
+/* Project Page */
+.ui.shape {
+    height: 85vh !important;
+}
+.ui.cube.shape .side, .ui.cube.shape .active.side {
+    height: 100% !important;
+}
+
+/* Home Page */
+.SlideMyImg .sides .side, .SlideMyImg .sides .active.side {
+    background: rgba(0,0,0,0) !important;
+}

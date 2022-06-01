@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ page }}{% endblock title %}
+{% block content %}
+{% include '__partials/__page_title.html' %}
+{% include '__partials/__divider.html' %}
+<div class="ui relaxed column grid container">
+    {% for distributor in distributors %}
+    <div class="four wide column">
+        <div class="ui green secondary segment">
+            <div class="ui card">
+                <div class="image">
+                    <img src="{{ distributor.image.url }}" class="ui fluid image"/>
+                </div>
+                <div class="content">
+                    <p>{{ distributor.name }}</p>
+                    <p>{{ distributor.location }}</p>
+                    <p>{{ distributor.phone }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% include '__partials/__padding_footer.html' %}
+{% endblock content %}

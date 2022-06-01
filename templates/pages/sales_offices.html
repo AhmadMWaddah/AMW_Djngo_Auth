@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ page }}{% endblock title %}
+{% block content %}
+{% include '__partials/__page_title.html' %}
+{% include '__partials/__divider.html' %}
+<div class="ui relaxed column grid container">
+    <div class="column">
+        <div class="ui green raised segment">
+            <img class="ui fluid image" src="{% static 'images/globe.jpg' %}"/>
+        </div>
+    </div>
+</div>
+{% include '__partials/__divider.html' %}
+{% for office in offices %}
+<div class="ui relaxed column grid container">
+    <div class="nine wide column">
+        <div class="ui green raised segment">
+            <img class="ui fluid image" src="{{ office.image.url }}"/>
+        </div>
+    </div>
+    <div class="seven wide column">
+        <div class="ui basic center aligned segment">
+            <h2 class="ui header">{{ office.region }}</h2>
+            <h4 class="ui header">{{ office.name }}</h4>
+            <p>
+                <span>{{ office.street }}</span>, <span>{{ office.city }}</span>, <span>{{ office.state }}</span>,
+                <span>{{ office.country }}</span>.
+            </p>
+            <p>{{ office.mobile }}</p>
+            <p>{{ office.phone }}</p>
+            <div class="ui basic segment">
+                <p><a href="mailto:{{ office.email }}">{{ office.email }}</a></p>
+                <p><a href="{{ office.website }}">{{ office.website }}</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+{% include '__partials/__divider.html' %}
+{% endfor %}
+{% include '__partials/__padding_footer.html' %}
+{% endblock content %}

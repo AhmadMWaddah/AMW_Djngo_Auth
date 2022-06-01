@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ page }}{% endblock title %}
+{% block content %}
+{% include '__partials/__page_title.html' %}
+{% include '__partials/__divider.html' %}
+<div class="ui relaxed five column grid container">
+    {% for country in countries %}
+    <div class="column">
+        <div class="ui segments">
+            <div class="ui center aligned segment">
+                <img class="ui fluid image" src="{{ country.image.url }}"/>
+            </div>
+            <div class="ui secondary center aligned segment">
+                <p class="FntFmly">{{ country.name }}</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% include '__partials/__divider.html' %}
+<div class="ui relaxed column grid container">
+    <div class="column">
+        <div class="ui basic center aligned segment">
+            <p class="ui header">to contact our friendly distributors in your region please visit.</p>
+            <a class="ui blue header" href="{% url 'our_stores' %}">Our Stores</a> or
+            <a class="ui blue header" href="{% url 'distributors' %}">Our Distributors</a> Or
+            <a class="ui blue header" href="{% url 'sales_offices' %}">Sales Offices</a>.
+        </div>
+    </div>
+</div>
+{% include '__partials/__padding_footer.html' %}
+{% endblock content %}

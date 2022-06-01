@@ -1,0 +1,78 @@
+{% load static %}
+<div class="ui grid">
+    <div class="column">
+        <div class="ui borderless top fixed menu">
+            <a class="header item" href="{% url 'index' %}">
+                <img src="{% static 'images/Anonymus.png' %}"/>
+            </a>
+            <div class="ui simple dropdown item">
+                About Us
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                    <a class="item" href="{% url 'history' %}">History</a>
+                    <a class="item" href="{% url 'safety_cetificates' %}">Safety & Certificates</a>
+                </div>
+            </div>
+            <div class="ui simple dropdown item">
+                <div>Shop</div>
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                    <a class="item" href="#">Category One</a>
+                    <a class="item" href="#">Category Two</a>
+                    <a class="item" href="#">Category Three</a>
+                </div>
+            </div>
+            <div class="ui simple dropdown item">
+                Inspiration
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                    <a class="item" href="{% url 'development_milestone' %}">Child Development Milestone</a>
+                    <a class="item" href="{% url 'room_concepts' %}">Room Concept</a>
+                    <a class="item" href="{% url 'size_guide' %}">Size Guide</a>
+                    <a class="item" href="{% url 'projects' %}">Projects</a>
+                    <a class="item" href="{% url 'timeline' %}">Timeline</a>
+                </div>
+            </div>
+            <a class="green item" href="{% url 'our_stores' %}">Our Stores</a>
+            <a class="item" href="{% url 'distributors' %}">Distributors</a>
+            <div class="ui simple dropdown item">
+                Support
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                    <a class="item" href="{% url 'faqs' %}">FAQs</a>
+                    <a class="item" href="{% url 'terms_conditions' %}">Terms & Conditions</a>
+                </div>
+            </div>
+            <div class="ui simple dropdown item">
+                Contact Us
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                    <a class="item" href="{% url 'sales_offices' %}">Sales Offices</a>
+                    <a class="item" href="{% url 'world_wide' %}">Representative Worldwide</a>
+                </div>
+            </div>
+            <a class="item" href="{% url 'admin:index' %}">Admin</a>
+            <div class="right menu">
+                {% if request.user.is_authenticated %}
+                <div class="ui left dropdown item Account_DropDown">
+                    <i class="green user circle large icon"></i>
+                    <div class="menu">
+                        <div class="item">
+                            <a href="">{{ user.username }}</a>
+                        </div>
+                        <div class="item">
+                            <a href="{% url 'logout' %}">Logout</a>
+                        </div>
+                    </div>
+                </div>
+                {% else %}
+                <div class="item">
+                    <a href="{% url 'register' %}">
+                        <i class="user large icon"></i>
+                    </a>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ page }}{% endblock title %}
+{% block content %}
+{% include '__partials/__page_title.html' %}
+{% include '__partials/__divider.html' %}
+<div class="ui middle aligned center aligned grid container">
+    <div class="ten wide column">
+        <div class="ui green raised segment">
+            <form class="ui form" action="" method="POST" novalidate>
+                {% csrf_token %}
+                {% for field in form %}
+                <div class="field">
+                    <label>{{ field.label }}</label>
+                    {{ field }}
+                </div>
+                {% endfor %}
+                <div class="ui basic segment">
+                    {% if form.non_field_errors %}
+                    {% for err in form.non_field_errors %}
+                    <div class="ui red message">
+                        {{ err }}
+                    </div>
+                    {% endfor %}
+                    {% endif %}
+                </div>
+                <input type="submit" class="ui button" value="Login"/>
+            </form>
+            <div class="ui basic padded segment">
+                <div class="ui green compact small message">
+                    Forgot Your Password? <a href="{% url 'password_reset' %}">Reset Password</a>.
+                </div>
+            </div>
+        </div>
+        <div class="ui green raised segment">
+            <div class="ui message">
+                You Are New To Us? Please <a href="{% url 'register' %}">Register</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% include '__partials/__padding_footer.html' %}
+{% endblock content %}

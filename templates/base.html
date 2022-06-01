@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    {% include '__partials/__head_tag.html' %}
+    <title>AMW {% block title %}{% endblock title %}</title>
+</head>
+<body>
+{% include '__partials/__nav_bar.html' %}
+{% include '__partials/__message_create_user.html' %}
+{% include '__partials/__social_icons.html' %}
+{% block content %}
+{% endblock content %}
+{% include '__partials/__footer.html' %}
+{% include '__partials/__author.html' %}
+{% include '__partials/__script_tag.html' %}
+</body>
+</html>

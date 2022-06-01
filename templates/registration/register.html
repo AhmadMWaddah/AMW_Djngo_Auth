@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ page }}{% endblock title %}
+{% block content %}
+{% include '__partials/__page_title.html' %}
+{% include '__partials/__divider.html' %}
+<div class="ui middle aligned center aligned grid container">
+    <div class="ten wide column">
+        <div class="ui green raised segment">
+            <form class="ui form" method="POST" action="">
+                {% csrf_token %}
+                {% for field in form %}
+                <div class="ui basic segment">
+                    <div class="field">
+                        <label>{{ field.label }}</label>
+                        {{ field }}
+                        {% if field.errors %}
+                        {% for err in field.errors %}
+                        <div class="ui pointing label">
+                            {{ err }}
+                        </div>
+                        {% endfor %}
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+                <input type="submit" class="ui button" value="Register"/>
+            </form>
+        </div>
+        <div class="ui green raised segment">
+            <div class="ui message">
+                You Have an Account Already? <a href="{% url 'login' %}">Log In</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% include '__partials/__padding_footer.html' %}
+{% endblock content %}

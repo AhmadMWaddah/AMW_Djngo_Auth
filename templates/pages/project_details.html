@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ page }}{% endblock title %}
+{% block content %}
+{% include '__partials/__page_title.html' %}
+{% include '__partials/__divider.html' %}
+
+<div class="ui container">
+    <div class="ui relaxed middle aligned grid">
+
+        <div class="one wide column">
+            <button id="Flipper_Left" class="ui icon button" onclick="flip_me_left()">
+                <i class="angle double left icon"></i>
+            </button>
+        </div>
+
+        <div class="fourteen wide column">
+            <div class="ui cube shape">
+                <div class="sides">
+                    <div class="active side">
+                        <div class="image">
+                            <img src="{{ project.main_image.url }}" class="ui rounded fluid image"/>
+                        </div>
+                    </div>
+                    {% for image in project_images %}
+                    <div class="side">
+                        <div class="image">
+                            <img src="{{ image.image.url }}" class="ui rounded fluid image"/>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <div class="one wide column">
+            <button id="Flipper_Right" class="ui right icon button" onclick="flip_me_right()">
+                <i class="angle double right icon"></i>
+            </button>
+        </div>
+
+    </div>
+</div>
+
+{% include '__partials/__divider.html' %}
+
+<div class="ui centered column relaxed grid container">
+    <a href="{% url 'projects' %}">
+        <button class="ui left labeled icon button">
+            <i class="left arrow icon"></i>
+            Back To Projects
+        </button>
+    </a>
+</div>
+
+{% include '__partials/__padding_footer.html' %}
+{% endblock content %}

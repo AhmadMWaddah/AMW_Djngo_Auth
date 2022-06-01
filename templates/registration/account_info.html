@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ page }}{% endblock title %}
+{% block content %}
+{% include '__partials/__page_title.html' %}
+{% include '__partials/__divider.html' %}
+<div class="ui middle aligned center aligned grid container">
+	<div class="ten wide column">
+		<div class="ui basic padded segment">
+			<div class="ui green compact small message">
+				Forgot Your Password? <a href="{% url 'password_change' %}">Change Password</a>.
+			</div>
+		</div>        
+	</div>
+</div>
+{% include '__partials/__padding_footer.html' %}
+{% endblock content %}
